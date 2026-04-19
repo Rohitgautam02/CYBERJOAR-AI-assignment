@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #f4f6f9;
+  --bg-card: #ffffff;
+  --bg-dark: #0f1929;
+  --bg-dark-card: #162035;
+  --navy: #1a2f5a;
+  --navy-light: #2d4a7a;
+  --gold: #c9a84c;
+  --gold-light: #f0d078;
+  --crimson: #c0392b;
+  --emerald: #1a7a4a;
+  --amber: #d68910;
+  --steel: #6c7a8d;
+  --border: #dde3ed;
+  --border-dark: #c5cdd8;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-page text-navy font-sans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-steel/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-steel/50;
+}
+
+/* Range Input Cross-browser Styles */
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/* Progress Fill Effect for Sliders (Chrome/Safari) */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: var(--navy);
+  cursor: pointer;
+  margin-top: -6px; /* Offset to center */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--border);
+  border-radius: 2px;
+}
+
+/* Animations */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 500px; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-badge {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.98); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-count-up { animation: count-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-slide-in { animation: slide-in 0.3s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.4s ease-out forwards; }
+.animate-pulse-badge { animation: pulse-badge 2s infinite ease-in-out; }
+.animate-scale-in { animation: scale-in 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+/* Utilities */
+.letter-spacing-military {
+  letter-spacing: 0.15em;
+}
+
+.glow-teal {
+  box-shadow: 0 0 10px rgba(0, 229, 192, 0.4);
+}
+
+.factor-slider {
+  transition: background 100ms;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

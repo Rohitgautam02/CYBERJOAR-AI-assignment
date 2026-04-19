@@ -1,0 +1,8 @@
+id,type,label,lat,lng,timestamp,confidence,priority,source,summary,tags
+SML-001,OSINT,Suspicious Port Activity,13.0827,80.2707,2026-04-16T10:00:00Z,88,HIGH,Satellite Feed,"Unusual assembly of heavy equipment near the primary container terminal. Cargo identity unverified.","maritime,security,chennai"
+SML-002,HUMINT,Asset Contact: Bravo Hotel,19.0760,72.8777,2026-04-16T14:30:00Z,75,MEDIUM,Field Operative,"Asset reported observation of two suspected handlers meeting at a known transit point. Exchange of documents confirmed.","humint,transit,mumbai"
+SML-003,IMINT,Logistics Hub Expansion,28.6139,77.2090,2026-04-17T09:15:00Z,92,LOW,Drone Recon,"Structural expansion of a private warehouse facility not listed in municipal records. Thermal signatures indicate cooling systems.","infrastructure,delhi,recon"
+SML-004,OSINT,Encrypted Sync Burst,17.3850,78.4867,2026-04-15T22:45:00Z,64,MEDIUM,SIGINT Monitor,"Detection of short-duration encrypted RF burst originating from the city center. Frequency hop pattern detected.","cyber,signals,hyderabad"
+SML-005,HUMINT,Supply Chain Diversion,12.9716,77.5946,2026-04-17T11:00:00Z,58,LOW,Logistics Insider,"Diversion of a high-value electronics shipment reported by a facility manager. Tracking unit disabled at 0400h.","cargo,theft,bangalore"
+
+

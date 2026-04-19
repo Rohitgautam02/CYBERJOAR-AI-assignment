@@ -1,0 +1,56 @@
+[
+  {
+    "id": "JSON-SML-001",
+    "type": "IMINT",
+    "label": "High-Res Satellite Acquisition",
+    "lat": 34.0837,
+    "lng": 74.7973,
+    "timestamp": "2026-04-17T05:22:18Z",
+    "confidence": 94,
+    "priority": "HIGH",
+    "source": "Satellite Recon",
+    "summary": "High-resolution optical acquisition of the northern sector transit points. 5 transport units identified in stationary positions.",
+    "tags": ["recon", "imagery", "srinagar"],
+    "metadata": {
+      "platform": "GEO-EYE-4",
+      "resolution": "0.3m",
+      "cloudCover": "4%"
+    }
+  },
+  {
+    "id": "JSON-SML-002",
+    "type": "OSINT",
+    "label": "Social Media Inflammatory Index",
+    "lat": 26.8467,
+    "lng": 80.9462,
+    "timestamp": "2026-04-16T18:40:00Z",
+    "confidence": 68,
+    "priority": "MEDIUM",
+    "source": "Sentiment Engine",
+    "summary": "Coordinated surge in negative sentiment regarding local infrastructure projects. Cluster analysis indicates 40% bot activity.",
+    "tags": ["social", "political", "lucknow"],
+    "metadata": {
+      "sentimentScore": "-0.82",
+      "volumeMetric": "2400/hr"
+    }
+  },
+  {
+    "id": "JSON-SML-003",
+    "type": "HUMINT",
+    "label": "Informant: Port Authority Leak",
+    "lat": 13.0475,
+    "lng": 80.2089,
+    "timestamp": "2026-04-15T11:10:00Z",
+    "confidence": 85,
+    "priority": "HIGH",
+    "source": "Asset BRAVO",
+    "summary": "Confidential report regarding un-manifested containers being offloaded at terminal 3. Possible military-grade hardware.",
+    "tags": ["leaked", "hardware", "chennai"],
+    "metadata": {
+      "assetCode": "BRAVO-7",
+      "reliability": "A2"
+    }
+  }
+]
+
+
