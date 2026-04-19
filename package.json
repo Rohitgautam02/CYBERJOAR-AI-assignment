@@ -1,0 +1,12 @@
+{
+  "name": "cyberjoar-intel-suite",
+  "private": true,
+  "workspaces": [
+    "ps1-fusion-dashboard",
+    "ps5-electoral-matrix"
+  ],
+  "scripts": {
+    "dev:ps1": "cd ps1-fusion-dashboard && npm run dev",
+    "dev:ps5": "cd ps5-electoral-matrix && npm run dev"
+  }
+}
