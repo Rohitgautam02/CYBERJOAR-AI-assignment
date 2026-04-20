@@ -1,5 +1,10 @@
 {
   "name": "ps1-fusion-dashboard",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev:front": "cd frontend && npm run dev",
+    "dev:back": "cd backend && npm run dev",
+    "build:front": "cd frontend && npm run build"
+  }
 }

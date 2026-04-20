@@ -62,7 +62,7 @@ const Header = ({ onHelpToggle }) => {
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-4">
             {/* TACTICAL CLOCK */}
-            <div className="hidden xl:flex flex-col items-end border-r border-border pr-4">
+            <div className="hidden md:flex flex-col items-end border-r border-border pr-4">
               <span className="font-mono text-[10px] text-steel font-bold leading-none tracking-wider">
                 {tactical.date}
               </span>
