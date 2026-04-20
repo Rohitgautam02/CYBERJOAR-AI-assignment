@@ -2,10 +2,12 @@
   "name": "cyberjoar-intel-suite",
   "private": true,
   "workspaces": [
-    "ps1-fusion-dashboard",
+    "ps1-fusion-dashboard/frontend",
+    "ps1-fusion-dashboard/backend",
     "ps5-electoral-matrix"
   ],
   "scripts": {
+    "build": "npm run build:ps1 && npm run build:ps5",
     "install:all": "npm install && npm install --workspace=ps1-fusion-dashboard/frontend && npm install --workspace=ps1-fusion-dashboard/backend && npm install --workspace=ps5-electoral-matrix",
     "dev:ps1-front": "npm run dev --workspace=ps1-fusion-dashboard/frontend",
     "dev:ps1-back": "npm run dev --workspace=ps1-fusion-dashboard/backend",

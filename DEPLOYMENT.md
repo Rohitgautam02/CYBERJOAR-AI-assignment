@@ -27,10 +27,12 @@ This document outlines the tactical deployment steps for the CyberJoar Strategic
 
 ### Phase B: Frontend View (Vercel)
 1.  **New Project**: Connect your GitHub repository.
-2.  **Root Directory**: `ps1-fusion-dashboard/frontend`
-3.  **Framework Preset**: `Vite`
-4.  **Environment Variables**:
-    - `VITE_API_URL`: `https://your-backend-subdomain.onrender.com/api` (The URL of your deployed PS1 Backend).
+2.  **CRITICAL Project Settings**:
+    - **Root Directory**: `ps1-fusion-dashboard/frontend` ◀ **[YOU MUST SET THIS]**
+    - **Framework Preset**: `Vite`
+    - **Output Directory**: `dist`
+3.  **Environment Variables**:
+    - `VITE_API_URL`: `https://your-backend-subdomain.onrender.com` (The URL of your deployed PS1 Backend).
 
 ---
 
@@ -38,16 +40,19 @@ This document outlines the tactical deployment steps for the CyberJoar Strategic
 
 ### Deployment (Vercel)
 1.  **New Project**: Connect your GitHub repository.
-2.  **Root Directory**: `ps5-electoral-matrix` (or use the root and set the directory in Vercel settings).
-3.  **Framework Preset**: `Vite`
-4.  **Environment Variables**: None required for the static Beta version.
+2.  **CRITICAL Project Settings**:
+    - **Root Directory**: `ps5-electoral-matrix` ◀ **[YOU MUST SET THIS]**
+    - **Framework Preset**: `Vite`
+    - **Output Directory**: `dist`
+3.  **Environment Variables**: None required for the static Beta version.
 
 ---
 
-## 🧩 Smooth Monorepo Tips
+## 🧩 Vercel Monorepo Troubleshooting
 
 > [!IMPORTANT]
-> **Vercel Root Settings**: When deploying subfolders in a monorepo, ensure the **Root Directory** is set correctly in the project settings. Do NOT deploy the entire monorepo as a single frontend project.
+> **Why do my builds fail?**
+> If you connect Vercel to the root of the repository WITHOUT setting the **Root Directory**, Vercel will try to build the entire suite from the top level, which will fail if there are conflicting dependencies or no global build script. Always point Vercel directly to the subfolder.
 
 > [!WARNING]
 > **CORS Security**: The PS1 Backend will reject requests from your deployed Frontend unless the `ALLOWED_ORIGINS` environment variable is set correctly in the Backend dashboard.
