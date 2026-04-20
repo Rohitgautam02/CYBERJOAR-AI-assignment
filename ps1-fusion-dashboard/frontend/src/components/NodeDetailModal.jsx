@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Copy, CheckCircle2, Download, Globe, Clock, Shield, BarChart3, Tag } from 'lucide-react';
+import { X, Copy, CheckCircle2, Download, Globe, Clock, Shield, BarChart3, Tag, Database } from 'lucide-react';
 import { MapContainer, TileLayer, CircleMarker } from 'react-leaflet';
 import ConfidenceBar from './ConfidenceBar';
 import NodeTypeBadge from './NodeTypeBadge';

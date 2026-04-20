@@ -31,8 +31,8 @@ const MapView = ({ nodes, onHover, onNodeClick }) => {
         maxZoom={16}
       >
         <TileLayer
-          url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
-          attribution='&copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
+          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
 
         <ZoomControl position="bottomright" />
@@ -106,9 +106,7 @@ const MapView = ({ nodes, onHover, onNodeClick }) => {
           0% { top: 0; }
           100% { top: 100%; }
         }
-        .leaflet-tile {
-          filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(80%) !important;
-        }
+
 
         /* Fix for tile grid lines/gaps */
         .leaflet-tile-container img {

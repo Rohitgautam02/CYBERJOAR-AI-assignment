@@ -180,7 +180,7 @@ export function useElectionEngine() {
         console.error("Tactical Restoration Failure: URL state corrupted.");
       }
     }
-  }, [setConstituencyState, setCandidates, setWeights, setTurnout]);
+  }, []);
 
   return {
     constituency,

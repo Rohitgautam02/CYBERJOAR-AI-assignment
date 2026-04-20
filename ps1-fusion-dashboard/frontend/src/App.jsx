@@ -24,6 +24,7 @@ const App = () => {
     addNodes, 
     updateNode, 
     exportAsJSON, 
+    exportAsCSV,
     stats 
   } = useNodes();
 
@@ -102,6 +103,8 @@ const App = () => {
           onToast={setToast}
           onToggle={() => setSidebarOpen(prev => !prev)}
           currentNodes={nodes}
+          onExportJSON={exportAsJSON}
+          onExportCSV={exportAsCSV}
         />
 
         {/* GEOSPATIAL OPERATIONAL VIEW */}

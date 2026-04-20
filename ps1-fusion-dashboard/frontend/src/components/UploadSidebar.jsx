@@ -21,7 +21,7 @@ import { parseIntelligenceJSON } from '../utils/parseJSON';
  * Component: UploadSidebar
  */
 
-const UploadSidebar = ({ isOpen, onNodesAdded, onToast, onToggle, currentNodes }) => {
+const UploadSidebar = ({ isOpen, onNodesAdded, onToast, onToggle, currentNodes, onExportJSON, onExportCSV }) => {
   const [syncing, setSyncing] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [dragActive, setDragActive] = useState(null);
@@ -289,12 +289,13 @@ const UploadSidebar = ({ isOpen, onNodesAdded, onToast, onToggle, currentNodes }
              </div>
              <div className="grid grid-cols-2 gap-2">
                 <button 
-                  onClick={() => {/* Implemented in Hook, passed as Prop usually or handled in App */}}
+                  onClick={onExportJSON}
                   className="flex items-center justify-center gap-2 py-1.5 border border-border-dim text-[9px] font-mono text-text-secondary hover:bg-bg-hover hover:text-text-primary transition-all rounded-[2px]"
                 >
                   <FileJson size={10} /> JSON
                 </button>
                 <button 
+                  onClick={onExportCSV}
                   className="flex items-center justify-center gap-2 py-1.5 border border-border-dim text-[9px] font-mono text-text-secondary hover:bg-bg-hover hover:text-text-primary transition-all rounded-[2px]"
                 >
                   <Download size={10} /> CSV

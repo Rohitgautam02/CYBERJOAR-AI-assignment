@@ -13,22 +13,22 @@ const Header = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const formatUTC = (date) => {
+  const formatLocal = (date) => {
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    const d = date.getUTCDate().toString().padStart(2, '0');
-    const m = months[date.getUTCMonth()];
-    const y = date.getUTCFullYear();
-    const h = date.getUTCHours().toString().padStart(2, '0');
-    const min = date.getUTCMinutes().toString().padStart(2, '0');
-    const s = date.getUTCSeconds().toString().padStart(2, '0');
+    const d = date.getDate().toString().padStart(2, '0');
+    const m = months[date.getMonth()];
+    const y = date.getFullYear();
+    const h = date.getHours().toString().padStart(2, '0');
+    const min = date.getMinutes().toString().padStart(2, '0');
+    const s = date.getSeconds().toString().padStart(2, '0');
     
     return {
       date: `${d} ${m} ${y}`,
-      time: `${h}:${min}:${s} UTC`
+      time: `${h}:${min}:${s} SYSTEM`
     };
   };
 
-  const { date: dateStr, time: timeStr } = formatUTC(time);
+  const { date: dateStr, time: timeStr } = formatLocal(time);
 
   return (
     <header className="h-[52px] sticky top-0 z-[100] bg-bg-elevated border-b border-border-dim classified-header flex items-center justify-between px-4">
